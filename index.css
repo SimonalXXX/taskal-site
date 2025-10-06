@@ -1,0 +1,13 @@
+
+body { margin: 0; }
+.container { max-width: 720px; width: 100%; padding: 24px; box-sizing: border-box; }
+.story { background: rgba(255,255,255,0.03); padding: 18px; border-radius: 8px; margin-bottom: 18px; }
+.story h2 { margin-top: 0; }
+.auth { background: rgba(255,255,255,0.02); padding: 16px; border-radius: 8px; }
+.login-form { display: grid; gap: 10px; }
+.login-form label { display: flex; flex-direction: column; font-size: 14px; }
+.login-form input { margin-top: 6px; padding: 8px 10px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.02); color: inherit; }
+.actions { display:flex; justify-content:flex-end; }
+.login-form button { padding: 8px 14px; border-radius: 6px; border: none; background: #238636; color: white; cursor: pointer; }
+.message { margin-top: 8px; font-size: 14px; }
+
