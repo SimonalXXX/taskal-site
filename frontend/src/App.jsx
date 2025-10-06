@@ -1,52 +1,35 @@
-import React from 'react'
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
 
-function Header(){
+function App() {
+  const [count, setCount] = useState(0)
+
   return (
-    <header className="header">
-      <div className="logo">Taskal</div>
-      <nav className="nav">
-        <a href="#story">Story</a>
-        <a href="#auth">Login</a>
-      </nav>
-    </header>
+    <>
+      <div>
+        <a href="https://vite.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </div>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.jsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
+    </>
   )
 }
 
-function Story(){
-  return (
-    <section id="story" className="card story">
-      <h2>Короткая философская история</h2>
-      <p>Путник посмотрел в озеро и увидел не только небо, но и свое отражение — напоминание, что мир состоит из зеркал. От перемен в нас отражается и мир, и наоборот. Быть внимательным — значит видеть связь между шумом ветра и своей мыслью.</p>
-    </section>
-  )
-}
-
-function Auth(){
-  const handleSubmit = (e)=>{
-    e.preventDefault();
-    alert('Вход выполнен (имитация)')
-  }
-  return (
-    <aside id="auth" className="card auth">
-      <h3>Вход</h3>
-      <form onSubmit={handleSubmit} className="form">
-        <label> Email <input type="email" required/></label>
-        <label> Пароль <input type="password" minLength={6} required/></label>
-        <div className="form-actions"><button type="submit">Войти</button></div>
-      </form>
-    </aside>
-  )
-}
-
-export default function App(){
-  return (
-    <div className="app">
-      <Header />
-      <main className="layout">
-        <Story />
-        <Auth />
-      </main>
-      <footer className="footer">© Taskal — Автодеплой</footer>
-    </div>
-  )
-}
+export default App
